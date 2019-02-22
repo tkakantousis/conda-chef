@@ -12,23 +12,23 @@ default["install"]["dir"]                        = "/srv/hops"
 default["install"]["current_version"]            = ""
 
 # Update target
-default["install"]["version"]                    = "0.9.0-SNAPSHOT"
+default["install"]["version"]                    = "0.10.0-SNAPSHOT"
 
 # List of released versions
-default["install"]["versions"]                     = "0.1.0,0.2.0,0.3.0,0.4.0,0.4.1,0.4.2,0.5.0,0.6.0,0.6.1,0.7.0,0.8.0,0.8.1"
+default["install"]["versions"]                   = "0.1.0,0.2.0,0.3.0,0.4.0,0.4.1,0.4.2,0.5.0,0.6.0,0.6.1,0.7.0,0.8.0,0.8.1,0.9.0"
 
 
 # These are global attributes which are inherited by all the cookbooks and therefore availabel
 # to all of them
 
-default["java"]["install_flavor"]                  = "openjdk"
-default['java']['set_etc_environment']             = true
-default["java"]["jdk_version"]                     = 8
+default["java"]["install_flavor"]                = "openjdk"
+default['java']['set_etc_environment']           = true
+default["java"]["jdk_version"]                   = 8
 
-default["rhel"]["epel"]                            = true 
+default["rhel"]["epel"]                          = true
 
 
-default['install']['user']                         = ""
+default['install']['user']                       = ""
 
 ############################ END GLOBAL ATTRIBUTES #######################################
 
@@ -54,7 +54,7 @@ default['pypi']['index']                         = ""
 default['pypi']['index-url']                     = ""
 default['pypi']['trusted-host']                  = ""
 
-default["conda"]["default_libs"]                   = %w{ }
+default["conda"]["default_libs"]                 = %w{ }
 #numpy hdfs3 scikit-learn matplotlib pandas
 
 # Comma separated list of provided library names we install for users
