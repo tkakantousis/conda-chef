@@ -15,20 +15,26 @@ default["install"]["current_version"]            = ""
 default["install"]["version"]                    = "0.10.0-SNAPSHOT"
 
 # List of released versions
-default["install"]["versions"]                     = "0.1.0,0.2.0,0.3.0,0.4.0,0.4.1,0.4.2,0.5.0,0.6.0,0.6.1,0.7.0,0.8.0,0.8.1,0.9.0"
+default["install"]["versions"]                   = "0.1.0,0.2.0,0.3.0,0.4.0,0.4.1,0.4.2,0.5.0,0.6.0,0.6.1,0.7.0,0.8.0,0.8.1,0.9.0"
 
+# Set the public and private ips for all services
+default["install"]["private_ips"]                = []
+default["install"]["public_ips"]                 = []
 
 # These are global attributes which are inherited by all the cookbooks and therefore availabel
 # to all of them
 
-default["java"]["install_flavor"]                  = "openjdk"
-default['java']['set_etc_environment']             = true
-default["java"]["jdk_version"]                     = 8
+default["java"]["install_flavor"]                = "openjdk"
+default['java']['set_etc_environment']           = true
+default["java"]["jdk_version"]                   = 8
 
-default["rhel"]["epel"]                            = true
+default["rhel"]["epel"]                          = true
+
+default['install']['user']                       = ""
 
 
-default['install']['user']                         = ""
+# This is used at least by Kafka, probably more services in future - like Hopsworks
+default["gateway_ips"]                             = ['10.0.2.2']
 
 ############################ END GLOBAL ATTRIBUTES #######################################
 
