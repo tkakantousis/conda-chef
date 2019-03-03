@@ -104,3 +104,15 @@ attribute "conda/provided_lib_names",
 attribute "conda/preinstalled_lib_names",
           :description => "Comma separated list of preinstalled libraries users should not touch",
           :type => "string"
+
+attribute "gateway_ips",
+          :description => "Gateway IPs for the cluster as a whole",
+          :type => "array"
+
+attribute "install/private_ips",
+          :description => "Default Private ip addresses",
+          :type => "array"
+
+attribute "install/public_ips",
+          :description => "Default public ip addresses",
+          :type => "array"
