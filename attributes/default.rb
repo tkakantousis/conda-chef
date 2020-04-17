@@ -54,7 +54,6 @@ default['conda']['python']                        = "3"
 default['conda']['nvidia-ml-py']['version']       = "7.352.0"
 default['conda']['pydoop']['version']             = "2.0.0"
 default['conda']['beam']['version']               = "2.19.0"
-default['conda']['beam']['python']['version']     = node['conda']['beam']['version'] + ".0"
 # either 'pip' or 'git'
 default["conda"]["hops-util-py"]["install-mode"]  = 'git'
 default["conda"]["hops-util-py"]["branch"]        = "master"
@@ -94,10 +93,10 @@ default["conda"]["default_libs"]                  = %w{ }
 # Additional libs will be installed (in tensorflow::default.rb) for the base environments
 default['conda']['additional_libs']               = ""
 # Comma separated list of preinstalled libraries users are able to uninstall
-default['conda']['libs']                          = "hops, pandas, numpy, matplotlib, maggy, tqdm, Flask, scikit-learn, avro, seaborn, confluent-kafka, hops-petastorm, opencv-python, tfx, tensorflow-model-analysis, pytorch, torchvision"
+default['conda']['libs']                          = "hops, pandas, numpy, matplotlib, maggy, tqdm, Flask, scikit-learn, avro, seaborn, confluent-kafka, hops-petastorm, opencv-python, tensorflow-model-analysis, pytorch, torchvision"
 default['conda']['provided_lib_names']            =  node['conda']['additional_libs'].empty? ? node['conda']['libs'] : "#{node['conda']['libs']}, #{node['conda']['additional_libs']}"
 # Comma separated list of preinstalled libraries users are not able to uninstall
-default['conda']['preinstalled_lib_names']        = "tensorflow, pydoop, pyspark, tensorboard, jupyterlab, sparkmagic, hdfscontents, pyjks, hops-apache-beam, pyopenssl"
+default['conda']['preinstalled_lib_names']        = "tensorflow, pydoop, tensorboard, jupyterlab, sparkmagic, hdfscontents, pyjks, hops-apache-beam, pyopenssl"
 
 default['conda']['jupyter']['version']['py3']                   = "1.1.4"
 default['conda']["jupyter"]["notebook"]["version"]              = "6.0.3"
